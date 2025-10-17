@@ -13,11 +13,6 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    alert('Thank you for your message! We will contact you soon.')
-  }
-
   return (
     <div className="app">
       {/* Header */}
@@ -38,20 +33,21 @@ function App() {
 
       {/* Hero Section */}
       <section className="hero">
-        <div className="hero-content">
-          <h1 className="hero-title">Premium Furniture & Interior Solutions</h1>
-          <p className="hero-subtitle">
-            Benin City's leading furniture manufacturing and interior design company. 
-            Transforming spaces with exceptional craftsmanship and innovative design.
-          </p>
-          <div className="hero-buttons">
-            <button className="btn-primary">View Our Work</button>
-            <button className="btn-secondary">Get Quote</button>
+        <div className="container">
+          <div className="hero-content">
+            <h1 className="hero-title">Premium Furniture & Interior Solutions</h1>
+            <p className="hero-subtitle">
+              Benin City's leading furniture manufacturing and interior design company. 
+              Transforming spaces with exceptional craftsmanship and innovative design.
+            </p>
+            <p className="hero-notice">
+              🚧 Our main website is coming soon! In the meantime, contact us for all your furniture and interior needs.
+            </p>
           </div>
-        </div>
-        <div className="hero-image">
-          <div className="hero-placeholder">
-            🪑 Premium Furniture Gallery
+          <div className="hero-image">
+            <div className="hero-placeholder">
+              🪑 Premium Furniture Gallery
+            </div>
           </div>
         </div>
       </section>
@@ -136,58 +132,29 @@ function App() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="cta-section">
-        <div className="container">
-          <div className="cta-content">
-            <h2>Ready to Transform Your Space?</h2>
-            <p>Experience the perfect blend of traditional craftsmanship and modern elegance with Ceetech Crafts.</p>
-            <div className="cta-buttons">
-              <button className="btn-primary">Schedule Consultation</button>
-              <button className="btn-secondary">View Portfolio</button>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Contact Section */}
       <section id="contact" className="contact">
         <div className="container">
-          <h2 className="section-title">Get In Touch</h2>
-          <div className="contact-grid">
-            <div className="contact-info">
-              <div className="contact-item">
-                <h3>Main Factory & Showroom</h3>
-                <p>2nd Entrance Ebvuabugun Sawmill<br />Off Sapele Road, Benin City</p>
-              </div>
-              <div className="contact-item">
-                <h3>Additional Locations</h3>
-                <p>40 Country Home Rd, Oka, Benin City<br />456 Mission Road, Benin City</p>
-              </div>
-              <div className="contact-item">
-                <h3>Contact Details</h3>
-                <p>📞 +234 816 541 0110<br />✉️ ceetechfurnitureandinteriors9@gmail.com</p>
-              </div>
-              <div className="contact-item">
-                <h3>Business Hours</h3>
-                <p>Monday - Saturday<br />7:00 AM - 6:00 PM</p>
-              </div>
+          <h2 className="section-title">Get Information & Stay Updated</h2>
+          <p className="contact-intro">
+            Our main website is under construction. Contact us directly using the information below for immediate assistance with your furniture and interior needs.
+          </p>
+          <div className="contact-info-grid">
+            <div className="contact-item">
+              <h3>Main Factory & Showroom</h3>
+              <p>2nd Entrance Ebvuabugun Sawmill<br />Off Sapele Road, Benin City</p>
             </div>
-            <div className="contact-form">
-              <form onSubmit={handleSubmit}>
-                <input type="text" placeholder="Your Name" required />
-                <input type="email" placeholder="Your Email" required />
-                <input type="tel" placeholder="Your Phone" required />
-                <select required>
-                  <option value="">Select Service</option>
-                  <option value="custom-furniture">Custom Furniture</option>
-                  <option value="interior-design">Interior Design</option>
-                  <option value="academy-training">Academy Training</option>
-                  <option value="commercial-projects">Commercial Projects</option>
-                </select>
-                <textarea placeholder="Tell us about your project" required></textarea>
-                <button type="submit" className="btn-primary">Send Message</button>
-              </form>
+            <div className="contact-item">
+              <h3>Additional Locations</h3>
+              <p>40 Country Home Rd, Oka, Benin City<br />456 Mission Road, Benin City</p>
+            </div>
+            <div className="contact-item">
+              <h3>Contact Details</h3>
+              <p>📞 +234 816 541 0110<br />✉️ ceetechfurnitureandinteriors9@gmail.com</p>
+            </div>
+            <div className="contact-item">
+              <h3>Business Hours</h3>
+              <p>Monday - Saturday<br />7:00 AM - 6:00 PM</p>
             </div>
           </div>
         </div>

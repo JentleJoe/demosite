@@ -76,13 +76,19 @@ body {
 
 /* Hero Section */
 .hero {
-  display: flex;
-  align-items: center;
   min-height: 100vh;
-  padding: 120px 20px 80px;
+  padding: 120px 0 80px;
   background: linear-gradient(135deg, #f8f6f0 0%, #fff 100%);
   position: relative;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.hero .container {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
 }
 
 .hero::before {
@@ -99,7 +105,6 @@ body {
 .hero-content {
   flex: 1;
   max-width: 600px;
-  margin-right: 40px;
   position: relative;
   z-index: 1;
   animation: slideInLeft 0.8s ease-out;
@@ -127,13 +132,19 @@ body {
 .hero-subtitle {
   font-size: 1.3rem;
   color: #666;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
   line-height: 1.6;
 }
 
-.hero-buttons {
-  display: flex;
-  gap: 1rem;
+.hero-notice {
+  font-size: 1.1rem;
+  color: #8B4513;
+  background: rgba(212, 165, 116, 0.1);
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #D4A574;
+  margin-bottom: 2rem;
+  font-weight: 500;
 }
 
 .btn-primary, .btn-secondary {
@@ -366,60 +377,19 @@ body {
   margin-bottom: 0.5rem;
 }
 
-/* CTA Section */
-.cta-section {
-  padding: 80px 0;
-  background: linear-gradient(135deg, #8B4513 0%, #D4A574 100%);
-  color: white;
-  text-align: center;
-}
-
-.cta-content h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  font-weight: 700;
-}
-
-.cta-content p {
-  font-size: 1.2rem;
-  margin-bottom: 2.5rem;
-  opacity: 0.9;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.cta-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-}
-
-.cta-buttons .btn-primary {
-  background: white;
-  color: #8B4513;
-}
-
-.cta-buttons .btn-primary:hover {
-  background: #f0f0f0;
-  transform: translateY(-2px);
-}
-
-.cta-buttons .btn-secondary {
-  background: transparent;
-  color: white;
-  border-color: white;
-}
-
-.cta-buttons .btn-secondary:hover {
-  background: white;
-  color: #8B4513;
-}
-
 /* Contact Section */
 .contact {
   padding: 80px 0;
   background: #f8f6f0;
+}
+
+.contact-intro {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  line-height: 1.6;
 }
 
 .contact-grid {
@@ -435,6 +405,13 @@ body {
   gap: 2rem;
 }
 
+.contact-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
 .contact-item h3 {
   color: #8B4513;
   margin-bottom: 0.5rem;
@@ -444,41 +421,6 @@ body {
 .contact-item p {
   color: #666;
   line-height: 1.6;
-}
-
-.contact-form {
-  background: white;
-  padding: 2.5rem;
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-}
-
-.contact-form form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.contact-form input,
-.contact-form select,
-.contact-form textarea {
-  padding: 15px;
-  border: 2px solid #e0e0e0;
-  border-radius: 8px;
-  font-size: 1rem;
-  transition: border-color 0.3s ease;
-}
-
-.contact-form input:focus,
-.contact-form select:focus,
-.contact-form textarea:focus {
-  outline: none;
-  border-color: #8B4513;
-}
-
-.contact-form textarea {
-  resize: vertical;
-  min-height: 120px;
 }
 
 /* Footer */
@@ -539,23 +481,14 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .hero {
+  .hero .container {
     flex-direction: column;
     text-align: center;
-    padding: 100px 20px 60px;
-  }
-  
-  .hero-content {
-    margin-right: 0;
-    margin-bottom: 2rem;
+    gap: 2rem;
   }
   
   .hero-title {
     font-size: 2.5rem;
-  }
-  
-  .hero-buttons {
-    justify-content: center;
   }
   
   .about-content {
@@ -563,7 +496,7 @@ body {
     gap: 2rem;
   }
   
-  .contact-grid {
+  .contact-info-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
@@ -585,19 +518,5 @@ body {
   .academy-features {
     flex-direction: column;
     gap: 2rem;
-  }
-  
-  .cta-content h2 {
-    font-size: 2rem;
-  }
-  
-  .cta-buttons {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .cta-buttons .btn-primary,
-  .cta-buttons .btn-secondary {
-    width: 250px;
   }
 }
