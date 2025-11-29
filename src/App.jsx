@@ -157,6 +157,43 @@ function App() {
               <p>Monday - Saturday<br />7:00 AM - 6:00 PM</p>
             </div>
           </div>
+          
+          {/* FAQ Section */}
+          <div className="faq">
+            <h3 className="faq-title">Frequently Asked Questions</h3>
+            <div className="faq-list">
+              <details>
+                <summary>What states do you serve?</summary>
+                <p>We serve clients across all states in Nigeria.</p>
+              </details>
+
+              <details>
+                <summary>Where are your showrooms and factory located?</summary>
+                <p>
+                  Our primary factory and main showroom is located at 2nd Entrance Ebvuabugun Sawmill, Off Sapele Road, Benin City. 
+                  We also operate additional showrooms at 40 Country Home Rd, Oka, Benin City and 456 Mission Road, Benin City.
+                </p>
+              </details>
+
+              <details>
+                <summary>Do you upgrade existing furniture?</summary>
+                <p>Yes — we provide furniture upgrade and refurbishment services to refresh and improve existing pieces.</p>
+              </details>
+
+              <details>
+                <summary>Do you offer any warranty?</summary>
+                <p>Yes — we provide a one-year warranty covering defects or damage resulting from our workmanship on furniture we create.</p>
+              </details>
+
+              <details>
+                <summary>How long does it take to make custom furniture?</summary>
+                <p>
+                  Timelines vary depending on the complexity and scope of the piece. Delivery time is typically agreed after an initial consultation.
+                  Please contact us to discuss your project and receive a tailored timeframe.
+                </p>
+              </details>
+            </div>
+          </div>
         </div>
       </section>
 
